@@ -1,0 +1,17 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tianchixr/config/   # 这里是仓库路径
+          username: github用户名
+          password: github密码
+          search-paths: config #这里是文件路劲
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
